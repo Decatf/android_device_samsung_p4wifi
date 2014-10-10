@@ -29,12 +29,12 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 14472970240
 TARGET_KERNEL_SOURCE := kernel/samsung/p4
 TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p4wifi-jb_defconfig
 # Keep this as a fallback
-TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel
+# TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel
 
 # Android system toolchain
-TARGET_GCC_VERSION_EXP := 4.8
+# TARGET_GCC_VERSION_EXP := 4.8
 # TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/linaro-arm-eabi-$(TARGET_GCC_VERSION)
 # TARGET_TOOLS_PREFIX := $(TARGET_TOOLCHAIN_ROOT)/bin/arm-linux-gnueabi-
 
 # Kernel toolchain
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
