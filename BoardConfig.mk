@@ -26,7 +26,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 606076928
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 14472970240
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/p4
-TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p4wifi-jb_defconfig
+# TARGET_KERNEL_SOURCE := kernel/samsung/p4
+# TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p4wifi-jb_defconfig
 # Keep this as a fallback
 # TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel_twrp
