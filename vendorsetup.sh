@@ -1,1 +1,3 @@
+add_lunch_combo p4wifi-user
 add_lunch_combo p4wifi-userdebug
+add_lunch_combo p4wifi-eng
