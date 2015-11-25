@@ -44,7 +44,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/gps.xml:system/etc/gps.xml
+     $(LOCAL_PATH)/gpsconfig.xml:system/etc/gpsconfig.xml
 
 # GPS config
 PRODUCT_PROPERTY_OVERRIDES += \
