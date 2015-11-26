@@ -1,18 +1,38 @@
-# Inherit device configuration for p4wifi.
-# $(call inherit-product, device/samsung/p4wifi/p4wifi.mk)
-
-# Inherit some common cyanogenmod stuff.
-# $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-
+# Copyright (C) 2011 The Android Open Source Project
 #
-# Setup device specific product configuration.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-PRODUCT_NAME := p4wifi
-PRODUCT_BRAND := samsung
-PRODUCT_DEVICE := p4wifi
-PRODUCT_MODEL := GT-P7510
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-P7510 BUILD_FINGERPRINT=samsung/GT-P7510/GT-P7510:4.0.4/IMM76D/UELPL:user/release-keys PRIVATE_BUILD_DESC="GT-P7510-user 4.0.4 IMM76D UELPL release-keys"
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-# Release name and versioning
-PRODUCT_RELEASE_NAME := p4wifi
+# Cameradata
+PRODUCT_COPY_FILES += \
+    device/samsung/p4-common/camera/cameradata/back_camera_test_pattern.yuv:system/cameradata/back_camera_test_pattern.yuv \
+    device/samsung/p4-common/camera/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \
+    device/samsung/p4-common/camera/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv \
+    device/samsung/p4-common/camera/cameradata/front_camera_test_pattern.yuv:system/cameradata/front_camera_test_pattern.yuv
+
+# Hdmi
+PRODUCT_COPY_FILES += \
+    device/samsung/p4-common/hdmi/dectable1.dat:system/etc/hdmi/dectable1.dat \
+    device/samsung/p4-common/hdmi/dectable.dat:system/etc/hdmi/dectable.dat
+
+# Wifi mfg
+PRODUCT_COPY_FILES += \
+    device/samsung/p4-common/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin
+
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/gpsconfig.xml:system/etc/gpsconfig.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.carrier=wifi-only
