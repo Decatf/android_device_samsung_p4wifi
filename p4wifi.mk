@@ -17,8 +17,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product, device/samsung/p4wifi/device.mk)
 $(call inherit-product, device/samsung/p4-common/p4-common.mk)
+$(call inherit-product, device/samsung/p4wifi/device.mk)
 $(call inherit-product-if-exists, vendor/samsung/p4wifi/p4wifi-vendor.mk)
 
 PRODUCT_NAME := p4wifi
