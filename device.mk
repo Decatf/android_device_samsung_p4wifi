@@ -37,5 +37,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only
 
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     init.modem.rc
