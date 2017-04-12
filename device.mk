@@ -32,7 +32,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/gpsconfig.xml:system/etc/gpsconfig.xml
+     $(LOCAL_PATH)/gps.xml:system/etc/gps.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only
