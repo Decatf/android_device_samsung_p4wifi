@@ -28,6 +28,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/p4-common/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin
 
+PRODUCT_COPY_FILES := \
+    device/samsung/p4/kernel:kernel
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
