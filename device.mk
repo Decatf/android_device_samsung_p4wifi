@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Try to build the kernel
+# TARGET_KERNEL_SOURCE := kernel/samsung/p4
+# TARGET_KERNEL_CONFIG := cyanogenmod_samsung_p4wifi-jb_defconfig
+# Keep this as a fallback
+TARGET_PREBUILT_KERNEL := device/samsung/p4wifi/kernel
+
 # Cameradata
 PRODUCT_COPY_FILES += \
     device/samsung/p4-common/camera/cameradata/back_camera_test_pattern.yuv:system/cameradata/back_camera_test_pattern.yuv \
@@ -29,7 +35,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/p4-common/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin
 
 PRODUCT_COPY_FILES := \
-    device/samsung/p4/kernel:kernel
+    $(TARGET_PREBUILT_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
